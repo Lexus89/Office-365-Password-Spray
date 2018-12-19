@@ -1,6 +1,6 @@
 # Office-365-Password-Spray
 
-For this script to work, two things need to be installed/present:
+For this script to work, two things need to be installed/present. The script *should* install these dependencies for you, but if not, see below:
 
 1) Microsoft Online Services Sign-in Assistant
 2) The MSOnline module
